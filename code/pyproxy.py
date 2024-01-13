@@ -21,8 +21,8 @@ FORMAT = '%(asctime)-15s %(levelname)-10s %(message)s'
 logging.basicConfig(format=FORMAT)
 LOGGER = logging.getLogger()
 
-LOCAL_DATA_HANDLER = lambda x:x
-REMOTE_DATA_HANDLER = lambda x:x
+LOCAL_DATA_HANDLER = lambda x: 'client to server by proxy' + x
+REMOTE_DATA_HANDLER = lambda x: 'server to client by proxy' + x
 
 BUFFER_SIZE = 2 ** 10  # 1024. Keep buffer size as power of 2.
 
